@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="img/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daemon's lair</title>
+</head>
+<style>A {text-decoration: none;} </style>
+<body onload="PageLoaded()">
+<script>
+$( function() {
+  $( "#video-player" ).resizable();
+  $( "#video-player" ).draggable();
+  $( "#id-memes" ).resizable();
+  $( "#id-memes" ).draggable();
+  $( "#id-home" ).resizable();
+  $( "#id-home" ).draggable();
+  $( "#id-rape" ).resizable();
+  $( "#id-rape" ).draggable();
+  $( "#id-about" ).resizable();
+  $( "#id-about" ).draggable();
+} );
+</script>
+
+    <% var CurrentVideo = "none"; %>
+    <% function SetVideoLink(link){ CurrentVideo = link; console.log('[+] Video link set.')} %>
+    <img onclick="valakas()" id="valakas" src="img/valakas.png" class="centerimg">
+        <div class="footer">Copyright <strong><span style="color:saddlebrown;">C</span><span style="color:black">a</span><span style="color:saddlebrown">pt</span><span style="color:black">ain</span></strong> / <strong><span style="color:red">Da</span><span style="color:rgb(117, 117, 117)">emo</span><span style="color:red">n</span></strong> 1939-2018
+        </div>
+    <div id="sidebar">
+
+        <div class="home" id="id-home">
+            <h1>Spiciest WEBMs & Ear rapes here</h1>
+        </div>
+
+        <div class="memes" id="id-memes">
+            <p><span style="color:white;">/</span><span>WE</span><span style="color:green;">B</span><span>M</span><span style="color:white;">/</span></p>
+            <p>Repository</p>
+            <div class="webm-list">
+                <ul>
+                    <% for(var i = 0; i<WEBM_list.length;i++){ %>
+                        <li><a onclick="test(this)"><%= WEBM_list[i] %></a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rape" id="id-rape">
+            <p><span style="color:white;">/</span><span style="color:yellow;">RA</span><span style="color:red;">P</span><span style="color:yellow";>E</span><span style="color:white;">/</span></p>
+            <p>Repository</p>
+        </div>
+
+        <div class="about" id="id-about">
+            <p>This is a professional meme hosting service.</p>
+        </div>
+        
+        <div class="toggle-btn" id="id-tgl-btn" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu" id="menu-id">
+            <ul>
+                <li onclick="toggleHome()" class="li-home">Home</li>
+                <li onclick="toggleMemes()" class="li-memes">Memes</li>
+                <li onclick="toggleRape()" class="li-rape">Ear rape</li>
+                <li onclick="toggleAbout()" class="li-about">About</li>
+            </ul>
+        </div>
+        <div class="sb_arch"> 
+            <img src="img/arch.png">
+            <span class="sb_arch_caption">Жмых entertainment</span>
+        </div>
+        <div class="sb_snoop">
+            <img src="img/snoop.gif">
+        </div>
+    </div>
+
+    <div id = "video-player">
+        <div class = "close-btn">
+        <a onclick="closePlayer()">[x]</a>
+        </div>
+        <div class = "video-container">
+            <video autoplay id ="video-id" controls="controls">
+            <source src="" type="video/mp4" />
+        </div>
+    </div>
+</body>
+</html>

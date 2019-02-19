@@ -1,0 +1,363 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: rgb(42, 46, 46)
+}
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    background-color: #efefef;
+    text-align: center;
+}
+
+
+#sidebar .sb_arch{
+    vertical-align:bottom;
+    display:inline-block;
+    text-align:center;
+    width:250px;
+}
+
+#sidebar .sb_arch img{
+    width:50%;
+    height:130px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top:30%;
+}
+#sidebar .sb_snoop img{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+#sidebar .sb_arch_caption{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 94, 23);
+    display:block;
+} 
+
+#sidebar{
+    position:fixed;
+    width:250px;
+    height:100%;
+    background-color: peru;
+    left:-250px;
+    transition: all 500ms linear;
+}
+
+#sidebar.active{
+    left:0px;
+}
+
+#sidebar .menu ul li{
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+    padding: 10px 5px;
+    padding-left: 35px;
+    border-bottom: 3px solid rgba(100,100,100,0.3);
+    transition: all 50ms linear;
+}
+
+#sidebar .menu ul li:hover{
+    color: rgb(224, 224, 224);
+    background-color: darkgreen;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px 5px;
+    padding-left: 45px;
+    border-bottom: 3px solid rgba(100,100,100,0.3);
+    cursor: pointer;
+}
+
+#sidebar .toggle-btn{
+    position:absolute;
+    left:280px;
+    top:20px;
+    transition: all 500ms linear;
+    cursor: pointer;
+    opacity: 0.1;
+}
+
+#sidebar .toggle-btn:hover{
+    position:absolute;
+    left:280px;
+    top:20px;
+    transition: all 500ms linear;
+    cursor: pointer;
+    opacity: 1;
+}
+#sidebar .toggle-btn.active{
+    transform: rotate(90deg);
+}
+
+#sidebar .toggle-btn span{
+    display: block;
+    width:30px;
+    height:5px;
+    background:rgb(252, 0, 55);
+    margin: 5px;
+}
+#sidebar .li-memes{
+    background-image: url("/img/succ.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 10%;
+
+}
+
+#sidebar .li-home{
+    background-image: url("/img/home-icon.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+
+#sidebar .li-rape{
+    background-image: url("/img/rape.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+
+#sidebar .li-about{
+    background-image: url("/img/think.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 10%;
+}
+
+#sidebar .home{
+    position: absolute;
+    height:50%;
+    width: 700px;
+    left:270px;
+    top:70px;
+    background-color: rgb(87, 87, 87);
+    border:  3px solid rgba(0, 255, 200, 0.466);
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px black;
+    transition: all 300ms linear;
+    display:inline-block;
+    overflow:hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#sidebar .home.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+#sidebar .memes{
+    position: absolute;
+    height: 70%;
+    width: 500%;
+    left: 150%;
+    top: 10%;
+    background-color: rgb(87, 87, 87);
+    border:  3px solid rgba(0, 255, 200, 0.466);
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px black;
+    transition: all 300ms linear;
+    overflow-y: scroll;
+    display:inline-block;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#sidebar .memes.active{
+    visibility: visible;
+    opacity:1;
+}
+
+#sidebar .memes p{
+    width:100%;
+    text-align:center;
+    font-size: 300%;
+}
+
+#sidebar .rape{
+    position: absolute;
+    height: 70%;
+    width: 500%;
+    left: 150%;
+    top: 10%;
+    background-color: rgb(87, 87, 87);
+    border:  3px solid rgba(0, 255, 200, 0.466);
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px black;
+    transition: all 300ms linear;
+    overflow-y: scroll;
+    display:inline-block;
+    visibility:hidden;
+    opacity: 0;
+}
+
+#sidebar .rape.active{
+    visibility:visible;
+    opacity:1;
+}
+
+#sidebar .rape p{  
+    width:100%;
+    text-align:center;
+    font-size: 300%;
+}
+
+
+#sidebar .about{
+    position: absolute;
+    height: 30%;
+    width: 300%;
+    left: 200%;
+    top: 10%;
+    background-color: rgb(87, 87, 87);
+    border:  3px solid rgba(0, 255, 200, 0.466);
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px black;
+    transition: all 300ms linear;
+    overflow:hidden;
+    display:inline-block;
+    visibility:hidden;
+    opacity: 0;
+}
+
+#sidebar .about.active{
+    visibility:visible;
+    opacity:1;
+}
+
+#sidebar .about p{
+    width:100%;
+    font-size: 200%;
+}
+
+
+#id-memes .webm-list ul li{
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+    padding: 10px 5px;
+    padding-left: 35px;
+    border-bottom: 3px solid rgba(248, 248, 248, 0.3);
+    transition: all 50ms linear;
+}
+
+#id-memes .webm-list ul li a{
+    color: rgb(224, 224, 224);
+    font-size: 20px;
+}
+
+#sidebar .webm-list ul li:hover{
+    color: rgb(224, 224, 224);
+    background-color: purple;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px 5px;
+    padding-left: 45px;
+    border-bottom: 3px solid rgba(100,100,100,0.3);
+    cursor: pointer;
+}
+
+#video-player{
+    position: absolute;
+    height: 70%;
+    width: 60%;
+    left: 20%;
+    top: 10%;
+    background-color: rgb(87, 87, 87);
+    border:  3px solid rgba(0, 255, 200, 0.466);
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px black;
+    transition: all 300ms linear;
+    visibility: hidden;
+    overflow-x: hidden; 
+    opacity: 0;
+}
+
+#video-player.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+#video-player .close-btn{
+    display:block;
+    position:relative;
+    color: rgb(224, 224, 224);
+    top: 1%;
+    left: 50%;
+    width: 30px;
+    height: 19px;
+    transition: all 100ms linear;
+}
+
+#video-player .close-btn:hover{
+    cursor: pointer;
+    background-color: darkred;
+    border-radius: 4px;
+    transition: all 100ms linear;
+}
+
+#video-player .video-container{
+    position: relative;
+    background-color: black;
+    border-radius: 5px;
+    border-color: white;
+    border: 3px solid;
+    color: chartreuse;
+    overflow-x: hidden; 
+    width: 93%;
+    height: 92%;
+    left: 3%;
+    top: 2%;
+  
+}
+#valakas{
+    cursor:pointer;
+    position:absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left:25%;
+    width: 50%;
+    transition: all 1000ms linear;
+}
+
+#valakas.active{
+    transition: all 1000ms linear;
+    filter: invert(100%) drop-shadow(8px 8px 10px gray);
+}
+
+#video-player .video-container video{
+    position: absolute; 
+    overflow-x: hidden; 
+    width: 100%; 
+    height: 100%;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #4d4d4d; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: rgb(53, 52, 51); 
+    transition: all 100ms linear;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(141, 141, 141); 
+    transition: all 100ms linear;
+}
